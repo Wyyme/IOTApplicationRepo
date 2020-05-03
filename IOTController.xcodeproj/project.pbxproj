@@ -1,0 +1,359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC3D180D245DCB0A00FADB30 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D180C245DCB0A00FADB30 /* LoginViewController.swift */; };
+		FC74CA842453474F00CC1799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74CA832453474F00CC1799 /* AppDelegate.swift */; };
+		FC74CA862453474F00CC1799 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74CA852453474F00CC1799 /* SceneDelegate.swift */; };
+		FC74CA882453474F00CC1799 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74CA872453474F00CC1799 /* ViewController.swift */; };
+		FC74CA8B2453474F00CC1799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74CA892453474F00CC1799 /* Main.storyboard */; };
+		FC74CA8D2453475000CC1799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC74CA8C2453475000CC1799 /* Assets.xcassets */; };
+		FC74CA902453475000CC1799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74CA8E2453475000CC1799 /* LaunchScreen.storyboard */; };
+		FCAD4AFC2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD4AFB2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift */; };
+		FCAD4AFE2453878100AF6B8A /* ListWirelessConnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD4AFD2453878100AF6B8A /* ListWirelessConnViewController.swift */; };
+		FCCAD1F024565BA800C03DB4 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCAD1EF24565BA800C03DB4 /* DevicesViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FC3D180C245DCB0A00FADB30 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FC74CA802453474F00CC1799 /* IOT Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOT Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC74CA832453474F00CC1799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC74CA852453474F00CC1799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FC74CA872453474F00CC1799 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC74CA8A2453474F00CC1799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC74CA8C2453475000CC1799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC74CA8F2453475000CC1799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC82320D245E5B7B00D29B7A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCAD4AFB2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WirelessConnectionTypeViewController.swift; sourceTree = "<group>"; };
+		FCAD4AFD2453878100AF6B8A /* ListWirelessConnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWirelessConnViewController.swift; sourceTree = "<group>"; };
+		FCCAD1EF24565BA800C03DB4 /* DevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC74CA7D2453474F00CC1799 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC74CA772453474F00CC1799 = {
+			isa = PBXGroup;
+			children = (
+				FC74CA822453474F00CC1799 /* IOTController */,
+				FC74CA812453474F00CC1799 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC74CA812453474F00CC1799 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC74CA802453474F00CC1799 /* IOT Controller.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC74CA822453474F00CC1799 /* IOTController */ = {
+			isa = PBXGroup;
+			children = (
+				FC74CA832453474F00CC1799 /* AppDelegate.swift */,
+				FC74CA852453474F00CC1799 /* SceneDelegate.swift */,
+				FC74CA872453474F00CC1799 /* ViewController.swift */,
+				FC74CA892453474F00CC1799 /* Main.storyboard */,
+				FC3D180C245DCB0A00FADB30 /* LoginViewController.swift */,
+				FCCAD1EF24565BA800C03DB4 /* DevicesViewController.swift */,
+				FCAD4AFD2453878100AF6B8A /* ListWirelessConnViewController.swift */,
+				FCAD4AFB2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift */,
+				FC74CA8C2453475000CC1799 /* Assets.xcassets */,
+				FC74CA8E2453475000CC1799 /* LaunchScreen.storyboard */,
+				FC82320D245E5B7B00D29B7A /* Info.plist */,
+			);
+			path = IOTController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC74CA7F2453474F00CC1799 /* IOTController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC74CA942453475000CC1799 /* Build configuration list for PBXNativeTarget "IOTController" */;
+			buildPhases = (
+				FC74CA7C2453474F00CC1799 /* Sources */,
+				FC74CA7D2453474F00CC1799 /* Frameworks */,
+				FC74CA7E2453474F00CC1799 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IOTController;
+			productName = WirelessLEDController;
+			productReference = FC74CA802453474F00CC1799 /* IOT Controller.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC74CA782453474F00CC1799 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Wyyme;
+				TargetAttributes = {
+					FC74CA7F2453474F00CC1799 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = FC74CA7B2453474F00CC1799 /* Build configuration list for PBXProject "IOTController" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC74CA772453474F00CC1799;
+			productRefGroup = FC74CA812453474F00CC1799 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC74CA7F2453474F00CC1799 /* IOTController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC74CA7E2453474F00CC1799 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC74CA902453475000CC1799 /* LaunchScreen.storyboard in Resources */,
+				FC74CA8D2453475000CC1799 /* Assets.xcassets in Resources */,
+				FC74CA8B2453474F00CC1799 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC74CA7C2453474F00CC1799 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3D180D245DCB0A00FADB30 /* LoginViewController.swift in Sources */,
+				FCAD4AFC2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift in Sources */,
+				FC74CA882453474F00CC1799 /* ViewController.swift in Sources */,
+				FCAD4AFE2453878100AF6B8A /* ListWirelessConnViewController.swift in Sources */,
+				FC74CA842453474F00CC1799 /* AppDelegate.swift in Sources */,
+				FCCAD1F024565BA800C03DB4 /* DevicesViewController.swift in Sources */,
+				FC74CA862453474F00CC1799 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FC74CA892453474F00CC1799 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC74CA8A2453474F00CC1799 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC74CA8E2453475000CC1799 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC74CA8F2453475000CC1799 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC74CA922453475000CC1799 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC74CA932453475000CC1799 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC74CA952453475000CC1799 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TUS96FN335;
+				INFOPLIST_FILE = "$(SRCROOT)/IOTController/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wyyme.IOTController;
+				PRODUCT_NAME = "IOT Controller";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC74CA962453475000CC1799 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TUS96FN335;
+				INFOPLIST_FILE = "$(SRCROOT)/IOTController/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wyyme.IOTController;
+				PRODUCT_NAME = "IOT Controller";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC74CA7B2453474F00CC1799 /* Build configuration list for PBXProject "IOTController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC74CA922453475000CC1799 /* Debug */,
+				FC74CA932453475000CC1799 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC74CA942453475000CC1799 /* Build configuration list for PBXNativeTarget "IOTController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC74CA952453475000CC1799 /* Debug */,
+				FC74CA962453475000CC1799 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC74CA782453474F00CC1799 /* Project object */;
+}
