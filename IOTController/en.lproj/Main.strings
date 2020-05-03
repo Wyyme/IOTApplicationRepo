@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "AHV-PC-pqj"; */
+"AHV-PC-pqj.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Red LED"; ObjectID = "Nq1-I7-b02"; */
+"Nq1-I7-b02.text" = "Red LED";
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "QBU-cr-xWF"; */
+"QBU-cr-xWF.normalTitle" = "Search";
+
+/* Class = "UIButton"; normalTitle = "Show LED Toggle Page"; ObjectID = "Tez-9z-cAU"; */
+"Tez-9z-cAU.normalTitle" = "Show LED Toggle Page";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "gpN-jm-VZc"; */
+"gpN-jm-VZc.text" = "Title";
+
+/* Class = "UILabel"; text = "Green LED"; ObjectID = "oVy-Dg-eCF"; */
+"oVy-Dg-eCF.text" = "Green LED";
+
+/* Class = "UILabel"; text = "Connect via BlueTooth:"; ObjectID = "wG6-1Z-gdI"; */
+"wG6-1Z-gdI.text" = "Connect via BlueTooth:";
