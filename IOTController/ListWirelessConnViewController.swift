@@ -20,6 +20,12 @@ class ListWirelessConnViewController: UIViewController, UITableViewDataSource, U
             destVC.selectedConnection = sender as? UITableViewCell
         }
         
+        if segue.identifier == "signOffLinkToLoginPage" {
+           self.dismiss(animated: true) {}
+           
+           tabBarController?.dismiss(animated: true, completion: {})
+           navigationController?.setNavigationBarHidden(true, animated: true)
+       }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

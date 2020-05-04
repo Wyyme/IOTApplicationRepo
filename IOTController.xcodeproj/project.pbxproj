@@ -48,6 +48,7 @@
 		FC74CA772453474F00CC1799 = {
 			isa = PBXGroup;
 			children = (
+				FC87AE61245F275700FB72E4 /* Models */,
 				FC74CA822453474F00CC1799 /* IOTController */,
 				FC74CA812453474F00CC1799 /* Products */,
 			);
@@ -77,6 +78,13 @@
 				FC82320D245E5B7B00D29B7A /* Info.plist */,
 			);
 			path = IOTController;
+			sourceTree = "<group>";
+		};
+		FC87AE61245F275700FB72E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

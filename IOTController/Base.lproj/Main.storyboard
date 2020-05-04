@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -119,7 +118,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="16X-Uc-oNl"/>
-                                    <barButtonItem title="LogOut" id="dwf-zw-OpN"/>
+                                    <barButtonItem title="LogOut" image="signoffImage" id="dwf-zw-OpN">
+                                        <connections>
+                                            <segue destination="SqN-9n-dJK" kind="show" identifier="signOffLinkToLoginPage" id="Gso-Aq-7YG"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -148,11 +151,15 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="RuX-or-lIe"/>
-                                    <barButtonItem title="LogOut" id="zWb-il-fED"/>
+                                    <barButtonItem title="LogOut" image="signoffImage" id="zWb-il-fED">
+                                        <connections>
+                                            <segue destination="SqN-9n-dJK" kind="show" identifier="signOffLinkToLoginPage" id="8Vb-iA-Q8S"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XCf-hn-tP7">
-                                <rect key="frame" x="0.0" y="56" width="414" height="671"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="659"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -219,14 +226,19 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eb8-pj-6za"/>
-                                    <barButtonItem title="LogOut" id="pDq-Uw-OmH"/>
+                                    <barButtonItem title="LogOut" image="signoffImage" id="pDq-Uw-OmH">
+                                        <connections>
+                                            <action selector="performSignOff:" destination="8XQ-CG-mi2" id="HLl-cv-7yg"/>
+                                            <segue destination="SqN-9n-dJK" kind="showDetail" identifier="signOffLinkToLoginPage" id="mx7-F8-dOB"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="BGM-Kp-k0E"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Devices" id="tmy-QI-NHB"/>
+                    <tabBarItem key="tabBarItem" title="Devices" image="devicesImage" id="tmy-QI-NHB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MT7-tt-YPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,39 +247,43 @@
         <!--Login View Controller-->
         <scene sceneID="9dt-Hp-rG2">
             <objects>
-                <viewController id="SqN-9n-dJK" customClass="LoginViewController" customModule="IOT_Controller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="SqN-9n-dJK" customClass="LoginViewController" customModule="IOT_Controller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="afm-lH-wny">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpY-ot-O7s">
-                                <rect key="frame" x="37" y="289" width="90" height="25"/>
+                                <rect key="frame" x="38" y="300" width="69" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter user name" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fwv-ZD-Sfr">
-                                <rect key="frame" x="123" y="289" width="256" height="34"/>
+                                <rect key="frame" x="107" y="295" width="271" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                <connections>
+                                    <action selector="loginUserNameEditingBegin:" destination="SqN-9n-dJK" eventType="editingDidBegin" id="Y7c-xu-ka7"/>
+                                    <action selector="loginUserNameEditingEnd:" destination="SqN-9n-dJK" eventType="editingDidEnd" id="6GJ-lR-UwD"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zt-4Z-MFc">
-                                <rect key="frame" x="38" y="337" width="78" height="30"/>
+                                <rect key="frame" x="38" y="337" width="68" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NOw-dY-xCe">
-                                <rect key="frame" x="123" y="337" width="190" height="34"/>
+                                <rect key="frame" x="107" y="337" width="190" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2J-db-KUX">
-                                <rect key="frame" x="123" y="387" width="83" height="39"/>
+                                <rect key="frame" x="107" y="387" width="83" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
@@ -278,8 +294,14 @@
                                     <action selector="loginAuthenticate:" destination="SqN-9n-dJK" eventType="touchUpInside" id="qfc-uI-Sdp"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logicBannerImage" translatesAutoresizingMaskIntoConstraints="NO" id="Fyy-Kl-6ES">
+                                <rect key="frame" x="0.0" y="44" width="414" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52T-TF-74p">
-                                <rect key="frame" x="224" y="387" width="89" height="39"/>
+                                <rect key="frame" x="208" y="386" width="89" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -290,60 +312,29 @@
                                     <action selector="clearUNameAndPwdFields:" destination="SqN-9n-dJK" eventType="touchUpInside" id="2oX-ZD-P69"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logicBannerImage" translatesAutoresizingMaskIntoConstraints="NO" id="Fyy-Kl-6ES">
-                                <rect key="frame" x="0.0" y="44" width="414" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92941176469999998" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gY3-PV-lxE">
-                                <rect key="frame" x="37" y="521" width="341" height="279"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yse-lX-DAE">
-                                    <size key="itemSize" width="146" height="122"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="PsK-a5-iwK">
-                                        <rect key="frame" x="0.0" y="0.0" width="146" height="122"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7TO-0R-3Ig">
-                                            <rect key="frame" x="0.0" y="0.0" width="146" height="122"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMk-yd-Bmr">
-                                                    <rect key="frame" x="52" y="51" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="146" height="122"/>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="SqN-9n-dJK" id="Gs2-ob-jyi"/>
-                                    <outlet property="delegate" destination="SqN-9n-dJK" id="wVr-h9-fpt"/>
-                                </connections>
-                            </collectionView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Authentication Failed !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDn-39-Ctg">
-                                <rect key="frame" x="38" y="438" width="340" height="30"/>
+                                <rect key="frame" x="107" y="261" width="271" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the product of Wyyme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dD-eB-gS0">
+                                <rect key="frame" x="107" y="729" width="203" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ag4-Xp-IDW"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DES-dS-svx"/>
                     <connections>
                         <outlet property="informationPlaceHolder" destination="vDn-39-Ctg" id="5fb-Jf-fNO"/>
+                        <outlet property="loginClearButton" destination="52T-TF-74p" id="d0B-94-rhD"/>
+                        <outlet property="loginSignInButton" destination="X2J-db-KUX" id="9Xs-vn-pXD"/>
                         <outlet property="loginUserName" destination="Fwv-ZD-Sfr" id="gT4-bb-dJD"/>
                         <outlet property="loginUserPassword" destination="NOw-dY-xCe" id="XPS-eG-OvC"/>
                         <segue destination="Lyu-Ql-XH0" kind="show" identifier="loginSuccess" id="KKI-ZL-MYC"/>
@@ -374,11 +365,11 @@
             </objects>
             <point key="canvasLocation" x="-290" y="48"/>
         </scene>
-        <!--Add Device-->
+        <!--Add Devices-->
         <scene sceneID="dMe-Ka-f6h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="rcP-sM-aan" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Add Device" id="ThU-nX-jSw"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Add Devices" image="addDevicesImage" id="ThU-nX-jSw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4gO-og-4VG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -413,22 +404,33 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mys-gg-b7R"/>
-                                    <barButtonItem title="LogOut" id="BLo-y2-1Zg"/>
+                                    <barButtonItem title="LogOut" image="signoffImage" id="BLo-y2-1Zg">
+                                        <connections>
+                                            <segue destination="SqN-9n-dJK" kind="show" identifier="signOffLinkToLoginPage" id="whN-EJ-u4g"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="eJN-f2-Pna"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Delete Devices" id="jHx-vi-B3x"/>
+                    <tabBarItem key="tabBarItem" title="Delete Devices" image="deleteDevicesImage" id="jHx-vi-B3x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbR-ZM-Lu9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="500" y="797"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="whN-EJ-u4g"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="addDevicesImage" width="25" height="25"/>
+        <image name="deleteDevicesImage" width="20" height="20"/>
+        <image name="devicesImage" width="25" height="25"/>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
         <image name="logicBannerImage" width="280.66665649414062" height="136.66667175292969"/>
+        <image name="signoffImage" width="16.666666030883789" height="16.666666030883789"/>
     </resources>
 </document>

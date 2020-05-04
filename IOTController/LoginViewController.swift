@@ -7,12 +7,15 @@
 //
 
 import UIKit
+//import Foundation
 
 class LoginViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var loginUserName: UITextField!
     @IBOutlet weak var loginUserPassword: UITextField!
     @IBOutlet weak var informationPlaceHolder: UILabel!
+    @IBOutlet weak var loginSignInButton: UIButton!
+    @IBOutlet weak var loginClearButton: UIButton!
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -30,10 +33,28 @@ class LoginViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // show keyboard
-        //loginUserName.becomeFirstResponder()
-        //loginUserPassword.becomeFirstResponder()
+        // hide keyboard
+        loginUserName.resignFirstResponder()
+        loginUserPassword.resignFirstResponder()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(loginUserNameChange), name: UITextField.textDidChangeNotification, object: nil)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(loginUserPasswordChange), name: UITextField.textDidChangeNotification, object: nil)
+        
+        loginSignInButton.isEnabled = false
+        //loginClearButton.isEnabled = false
+        
+        
     }
+    
+    @objc func loginUserNameChange(){
+        handleSignInAndClearButtonChange()
+    }
+
+    @objc func loginUserPasswordChange(){
+        handleSignInAndClearButtonChange()
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -45,25 +66,58 @@ class LoginViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     @IBAction func loginAuthenticate(_ sender: Any) {
         
-        
-        
         if loginUserName?.text == "admin" && loginUserPassword?.text == "admin" {
-            print("User Name \(String(describing: loginUserName?.text!))")
-            print("Password \(String(describing: loginUserPassword?.text!))")
+
+            //UIActivityIndicatorView.startAnimating(UIActivityIndicatorView)
+            
+            //let time = dispatch_time_t(DISPATCH_TIME_NOW, Int(Int64(0.5*Double(NSEC_PER_SEC))))
+                
+            //DispatchQueue.asyncAfter(<#T##self: DispatchQueue##DispatchQueue#>)
+            
             performSegue(withIdentifier: "loginSuccess", sender: nil)
             informationPlaceHolder.isHidden = true
         }
         else {
             informationPlaceHolder.isHidden = false
+            // hide keyboard
         }
+        // hide keyboard
+        loginUserName.resignFirstResponder()
+        loginUserPassword.resignFirstResponder()
         
     }
     
     @IBAction func clearUNameAndPwdFields(_ sender: Any) {
-        loginUserPassword?.text = ""
-        loginUserName?.text = ""
+        
+        if loginUserName?.text != "" || loginUserPassword?.text != "" {
+            loginUserPassword?.text = ""
+            loginUserName?.text = ""
+            loginSignInButton.isEnabled = false
+        }
         informationPlaceHolder.isHidden = true
     }
+    
+    @IBAction func loginUserNameEditingBegin(_ sender: Any) {
+        loginUserName.becomeFirstResponder()
+    }
+    
+    @IBAction func loginUserNameEditingEnd(_ sender: Any) {
+        loginUserName.resignFirstResponder()
+    }
+    
+    
+    func handleSignInAndClearButtonChange() {
+    
+        if loginUserName?.text == "" || loginUserPassword?.text == "" {
+                   loginSignInButton.isEnabled = false
+                   //loginClearButton.isEnabled = false
+               }
+               else {
+                  loginSignInButton.isEnabled = true
+                  //loginClearButton.isEnabled = true
+               }
+    }
+    
     
     /*
     // MARK: - Navigation

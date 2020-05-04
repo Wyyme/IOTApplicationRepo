@@ -10,13 +10,18 @@ import UIKit
 
 class WirelessConnectionTypeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "NetworkTypeToNetworkList" {
             let destVC = segue.destination as! ListWirelessConnViewController
             destVC.selectedWirelessType = sender as? UITableViewCell
+        }
+        
+        if segue.identifier == "signOffLinkToLoginPage" {
+            self.dismiss(animated: true) {}
+            
+            tabBarController?.dismiss(animated: true, completion: {})
+            navigationController?.setNavigationBarHidden(true, animated: true)
         }
         
     }

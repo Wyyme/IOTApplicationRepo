@@ -16,7 +16,21 @@ class DevicesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "signOffLinkToLoginPage" {
+           self.dismiss(animated: true) {}
+           
+           tabBarController?.dismiss(animated: true, completion: {})
+           navigationController?.setNavigationBarHidden(true, animated: true)
+       }
+    }
+    
+    @IBAction func performSignOff(_ sender: Any) {
+        performSegue(withIdentifier: "loginSuccess", sender: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
