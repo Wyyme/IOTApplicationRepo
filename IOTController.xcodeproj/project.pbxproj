@@ -16,6 +16,16 @@
 		FC74CA902453475000CC1799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74CA8E2453475000CC1799 /* LaunchScreen.storyboard */; };
 		FCA5434E246270EC00D533CE /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA5434D246270EC00D533CE /* Devices.swift */; };
 		FCA543502462747200D533CE /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA5434F2462747200D533CE /* UserDefaultsManager.swift */; };
+		FCA5435324627C8100D533CE /* imgAddDevices.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5435224627C8100D533CE /* imgAddDevices.png */; };
+		FCA5435524627C9500D533CE /* imgSignOff 2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5435424627C9500D533CE /* imgSignOff 2.png */; };
+		FCA5435724627C9E00D533CE /* imgDeleteDevices.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5435624627C9E00D533CE /* imgDeleteDevices.png */; };
+		FCA5435E24627CBC00D533CE /* imgIOTApp.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5435824627CBB00D533CE /* imgIOTApp.png */; };
+		FCA5435F24627CBC00D533CE /* imgbluetooth.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5435924627CBB00D533CE /* imgbluetooth.png */; };
+		FCA5436024627CBC00D533CE /* imgwifi.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5435A24627CBB00D533CE /* imgwifi.png */; };
+		FCA5436124627CBC00D533CE /* imgmobile.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5435B24627CBC00D533CE /* imgmobile.png */; };
+		FCA5436224627CBC00D533CE /* imgDevices.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5435C24627CBC00D533CE /* imgDevices.png */; };
+		FCA5436324627CBC00D533CE /* imgIOTBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5435D24627CBC00D533CE /* imgIOTBanner.png */; };
+		FCA5436524627D0D00D533CE /* imgIOTApp_Backup.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5436424627D0D00D533CE /* imgIOTApp_Backup.png */; };
 		FCAD4AFC2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD4AFB2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift */; };
 		FCAD4AFE2453878100AF6B8A /* ListWirelessConnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD4AFD2453878100AF6B8A /* ListWirelessConnViewController.swift */; };
 		FCCAD1F024565BA800C03DB4 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCAD1EF24565BA800C03DB4 /* DevicesViewController.swift */; };
@@ -33,6 +43,16 @@
 		FC82320D245E5B7B00D29B7A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCA5434D246270EC00D533CE /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
 		FCA5434F2462747200D533CE /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		FCA5435224627C8100D533CE /* imgAddDevices.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgAddDevices.png; sourceTree = "<group>"; };
+		FCA5435424627C9500D533CE /* imgSignOff 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imgSignOff 2.png"; sourceTree = "<group>"; };
+		FCA5435624627C9E00D533CE /* imgDeleteDevices.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgDeleteDevices.png; sourceTree = "<group>"; };
+		FCA5435824627CBB00D533CE /* imgIOTApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgIOTApp.png; sourceTree = "<group>"; };
+		FCA5435924627CBB00D533CE /* imgbluetooth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgbluetooth.png; sourceTree = "<group>"; };
+		FCA5435A24627CBB00D533CE /* imgwifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgwifi.png; sourceTree = "<group>"; };
+		FCA5435B24627CBC00D533CE /* imgmobile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgmobile.png; sourceTree = "<group>"; };
+		FCA5435C24627CBC00D533CE /* imgDevices.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgDevices.png; sourceTree = "<group>"; };
+		FCA5435D24627CBC00D533CE /* imgIOTBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgIOTBanner.png; sourceTree = "<group>"; };
+		FCA5436424627D0D00D533CE /* imgIOTApp_Backup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgIOTApp_Backup.png; sourceTree = "<group>"; };
 		FCAD4AFB2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WirelessConnectionTypeViewController.swift; sourceTree = "<group>"; };
 		FCAD4AFD2453878100AF6B8A /* ListWirelessConnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWirelessConnViewController.swift; sourceTree = "<group>"; };
 		FCCAD1EF24565BA800C03DB4 /* DevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +72,7 @@
 		FC74CA772453474F00CC1799 = {
 			isa = PBXGroup;
 			children = (
+				FCA5435124627C5B00D533CE /* Images */,
 				FCA5434C2462708D00D533CE /* Utility */,
 				FC87AE61245F275700FB72E4 /* Models */,
 				FC74CA822453474F00CC1799 /* IOTControllerScene */,
@@ -99,6 +120,23 @@
 				FCA5434F2462747200D533CE /* UserDefaultsManager.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		FCA5435124627C5B00D533CE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FCA5436424627D0D00D533CE /* imgIOTApp_Backup.png */,
+				FCA5435C24627CBC00D533CE /* imgDevices.png */,
+				FCA5435924627CBB00D533CE /* imgbluetooth.png */,
+				FCA5435824627CBB00D533CE /* imgIOTApp.png */,
+				FCA5435B24627CBC00D533CE /* imgmobile.png */,
+				FCA5435A24627CBB00D533CE /* imgwifi.png */,
+				FCA5435D24627CBC00D533CE /* imgIOTBanner.png */,
+				FCA5435624627C9E00D533CE /* imgDeleteDevices.png */,
+				FCA5435424627C9500D533CE /* imgSignOff 2.png */,
+				FCA5435224627C8100D533CE /* imgAddDevices.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +198,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC74CA902453475000CC1799 /* LaunchScreen.storyboard in Resources */,
+				FCA5436024627CBC00D533CE /* imgwifi.png in Resources */,
+				FCA5435324627C8100D533CE /* imgAddDevices.png in Resources */,
+				FCA5435524627C9500D533CE /* imgSignOff 2.png in Resources */,
+				FCA5436524627D0D00D533CE /* imgIOTApp_Backup.png in Resources */,
 				FC74CA8D2453475000CC1799 /* Assets.xcassets in Resources */,
+				FCA5435724627C9E00D533CE /* imgDeleteDevices.png in Resources */,
+				FCA5435E24627CBC00D533CE /* imgIOTApp.png in Resources */,
+				FCA5436124627CBC00D533CE /* imgmobile.png in Resources */,
+				FCA5435F24627CBC00D533CE /* imgbluetooth.png in Resources */,
 				FC74CA8B2453474F00CC1799 /* Main.storyboard in Resources */,
+				FCA5436324627CBC00D533CE /* imgIOTBanner.png in Resources */,
+				FCA5436224627CBC00D533CE /* imgDevices.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
