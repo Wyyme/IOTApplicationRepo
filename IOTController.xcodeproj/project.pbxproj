@@ -54,7 +54,7 @@
 			children = (
 				FCA5434C2462708D00D533CE /* Utility */,
 				FC87AE61245F275700FB72E4 /* Models */,
-				FC74CA822453474F00CC1799 /* IOTController */,
+				FC74CA822453474F00CC1799 /* IOTControllerScene */,
 				FC74CA812453474F00CC1799 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,7 +67,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC74CA822453474F00CC1799 /* IOTController */ = {
+		FC74CA822453474F00CC1799 /* IOTControllerScene */ = {
 			isa = PBXGroup;
 			children = (
 				FC74CA832453474F00CC1799 /* AppDelegate.swift */,
@@ -82,7 +82,7 @@
 				FC74CA8E2453475000CC1799 /* LaunchScreen.storyboard */,
 				FC82320D245E5B7B00D29B7A /* Info.plist */,
 			);
-			path = IOTController;
+			path = IOTControllerScene;
 			sourceTree = "<group>";
 		};
 		FC87AE61245F275700FB72E4 /* Models */ = {
@@ -326,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TUS96FN335;
-				INFOPLIST_FILE = "$(SRCROOT)/IOTController/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/IOTControllerScene/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TUS96FN335;
-				INFOPLIST_FILE = "$(SRCROOT)/IOTController/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/IOTControllerScene/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
