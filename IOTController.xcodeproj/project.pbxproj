@@ -14,6 +14,8 @@
 		FC74CA8B2453474F00CC1799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74CA892453474F00CC1799 /* Main.storyboard */; };
 		FC74CA8D2453475000CC1799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC74CA8C2453475000CC1799 /* Assets.xcassets */; };
 		FC74CA902453475000CC1799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74CA8E2453475000CC1799 /* LaunchScreen.storyboard */; };
+		FCA5434E246270EC00D533CE /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA5434D246270EC00D533CE /* Devices.swift */; };
+		FCA543502462747200D533CE /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA5434F2462747200D533CE /* UserDefaultsManager.swift */; };
 		FCAD4AFC2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD4AFB2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift */; };
 		FCAD4AFE2453878100AF6B8A /* ListWirelessConnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD4AFD2453878100AF6B8A /* ListWirelessConnViewController.swift */; };
 		FCCAD1F024565BA800C03DB4 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCAD1EF24565BA800C03DB4 /* DevicesViewController.swift */; };
@@ -29,6 +31,8 @@
 		FC74CA8C2453475000CC1799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC74CA8F2453475000CC1799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC82320D245E5B7B00D29B7A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCA5434D246270EC00D533CE /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
+		FCA5434F2462747200D533CE /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		FCAD4AFB2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WirelessConnectionTypeViewController.swift; sourceTree = "<group>"; };
 		FCAD4AFD2453878100AF6B8A /* ListWirelessConnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWirelessConnViewController.swift; sourceTree = "<group>"; };
 		FCCAD1EF24565BA800C03DB4 /* DevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 		FC74CA772453474F00CC1799 = {
 			isa = PBXGroup;
 			children = (
+				FCA5434C2462708D00D533CE /* Utility */,
 				FC87AE61245F275700FB72E4 /* Models */,
 				FC74CA822453474F00CC1799 /* IOTController */,
 				FC74CA812453474F00CC1799 /* Products */,
@@ -83,8 +88,17 @@
 		FC87AE61245F275700FB72E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FCA5434D246270EC00D533CE /* Devices.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FCA5434C2462708D00D533CE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FCA5434F2462747200D533CE /* UserDefaultsManager.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +175,9 @@
 				FC3D180D245DCB0A00FADB30 /* LoginViewController.swift in Sources */,
 				FCAD4AFC2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift in Sources */,
 				FC74CA882453474F00CC1799 /* ViewController.swift in Sources */,
+				FCA5434E246270EC00D533CE /* Devices.swift in Sources */,
 				FCAD4AFE2453878100AF6B8A /* ListWirelessConnViewController.swift in Sources */,
+				FCA543502462747200D533CE /* UserDefaultsManager.swift in Sources */,
 				FC74CA842453474F00CC1799 /* AppDelegate.swift in Sources */,
 				FCCAD1F024565BA800C03DB4 /* DevicesViewController.swift in Sources */,
 				FC74CA862453474F00CC1799 /* SceneDelegate.swift in Sources */,

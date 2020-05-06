@@ -9,7 +9,7 @@
 import UIKit
 //import Foundation
 
-class LoginViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginUserName: UITextField!
     @IBOutlet weak var loginUserPassword: UITextField!
@@ -17,18 +17,6 @@ class LoginViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var loginSignInButton: UIButton!
     @IBOutlet weak var loginClearButton: UIButton!
     
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath)
-        
-        
-        return collectionViewCell
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +26,14 @@ class LoginViewController: UIViewController, UICollectionViewDataSource, UIColle
         loginUserPassword.resignFirstResponder()
         
         NotificationCenter.default.addObserver(self, selector: #selector(loginUserNameChange), name: UITextField.textDidChangeNotification, object: nil)
-
         NotificationCenter.default.addObserver(self, selector: #selector(loginUserPasswordChange), name: UITextField.textDidChangeNotification, object: nil)
         
         loginSignInButton.isEnabled = false
         //loginClearButton.isEnabled = false
         
-        
+        let defaults = UserDefaults()
+        loginUserName?.text = defaults.object(forKey: "Uname") as? String
+        loginUserPassword?.text = defaults.object(forKey: "Password") as? String
     }
     
     @objc func loginUserNameChange(){
@@ -54,7 +43,6 @@ class LoginViewController: UIViewController, UICollectionViewDataSource, UIColle
     @objc func loginUserPasswordChange(){
         handleSignInAndClearButtonChange()
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -69,10 +57,12 @@ class LoginViewController: UIViewController, UICollectionViewDataSource, UIColle
         if loginUserName?.text == "admin" && loginUserPassword?.text == "admin" {
 
             //UIActivityIndicatorView.startAnimating(UIActivityIndicatorView)
-            
             //let time = dispatch_time_t(DISPATCH_TIME_NOW, Int(Int64(0.5*Double(NSEC_PER_SEC))))
-                
             //DispatchQueue.asyncAfter(<#T##self: DispatchQueue##DispatchQueue#>)
+
+            let defaults = UserDefaults()
+            defaults.set(loginUserName?.text, forKey: "Uname")
+            defaults.set(loginUserPassword?.text, forKey: "Password")
             
             performSegue(withIdentifier: "loginSuccess", sender: nil)
             informationPlaceHolder.isHidden = true
