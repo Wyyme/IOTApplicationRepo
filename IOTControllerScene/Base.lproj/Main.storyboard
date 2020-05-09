@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -64,11 +65,12 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dEL-XF-vrc"/>
                                     <barButtonItem title="LogOut" image="signoffImage" id="p2i-0f-SbO">
                                         <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dEL-XF-vrc"/>
                                 </items>
+                                <color key="barTintColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -115,13 +117,14 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dq9-xi-L0h">
                                 <rect key="frame" x="0.0" y="56" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="16X-Uc-oNl"/>
                                     <barButtonItem title="LogOut" image="signoffImage" id="dwf-zw-OpN">
                                         <connections>
                                             <segue destination="SqN-9n-dJK" kind="show" identifier="signOffLinkToLoginPage" id="Gso-Aq-7YG"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="16X-Uc-oNl"/>
                                 </items>
+                                <color key="barTintColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -190,13 +193,14 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Z-zT-Qz1">
                                 <rect key="frame" x="0.0" y="56" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RuX-or-lIe"/>
                                     <barButtonItem title="LogOut" image="signoffImage" id="zWb-il-fED">
                                         <connections>
                                             <segue destination="SqN-9n-dJK" kind="show" identifier="signOffLinkToLoginPage" id="8Vb-iA-Q8S"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RuX-or-lIe"/>
                                 </items>
+                                <color key="barTintColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -223,47 +227,94 @@
         <!--Devices-->
         <scene sceneID="q26-Z0-5eO">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="8XQ-CG-mi2" customClass="DevicesViewController" customModule="IOT_Controller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="8XQ-CG-mi2" customClass="RegDevViewController" customModule="IOT_Controller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ccc-Q0-WRk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List of Registered Devices" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tis-Sn-fJC">
-                                <rect key="frame" x="108" y="265" width="199" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ryj-6a-zxB">
-                                <rect key="frame" x="0.0" y="715" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryj-6a-zxB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eb8-pj-6za"/>
                                     <barButtonItem title="LogOut" image="signoffImage" id="pDq-Uw-OmH">
                                         <connections>
                                             <action selector="performSignOff:" destination="8XQ-CG-mi2" id="HLl-cv-7yg"/>
                                             <segue destination="SqN-9n-dJK" kind="showDetail" identifier="signOffLinkToLoginPage" id="mx7-F8-dOB"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eb8-pj-6za"/>
                                 </items>
+                                <color key="barTintColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LOl-xB-sYj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="715" id="oYh-ya-tf5"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="tSl-JM-WFY">
+                                    <size key="itemSize" width="147" height="141"/>
+                                    <size key="headerReferenceSize" width="50" height="64"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="registeredDevicesCollectionViewCell" id="grq-HY-id7">
+                                        <rect key="frame" x="8" y="82" width="147" height="141"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0eE-2m-RP6">
+                                            <rect key="frame" x="0.0" y="0.0" width="147" height="141"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="147" height="141"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="registeredDevicesCollectionSectionHdr" id="PiA-gx-mXf" customClass="RegDevHdrCollectionReusableView" customModule="IOT_Controller" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="8" width="414" height="64"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered Devices" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvG-hX-JVA">
+                                            <rect key="frame" x="8" y="9" width="377" height="55"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="JvG-hX-JVA" secondAttribute="trailing" constant="21" id="4kW-K3-SK1"/>
+                                        <constraint firstItem="JvG-hX-JVA" firstAttribute="top" secondItem="PiA-gx-mXf" secondAttribute="topMargin" constant="1" id="GHa-F4-cRe"/>
+                                        <constraint firstAttribute="bottom" secondItem="JvG-hX-JVA" secondAttribute="bottom" id="KxC-Ie-DM7"/>
+                                        <constraint firstItem="JvG-hX-JVA" firstAttribute="leading" secondItem="PiA-gx-mXf" secondAttribute="leadingMargin" id="f93-h0-Yke"/>
+                                    </constraints>
+                                </collectionReusableView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LOl-xB-sYj" firstAttribute="trailing" secondItem="ryj-6a-zxB" secondAttribute="trailing" id="Ard-h9-FtP"/>
+                            <constraint firstItem="ryj-6a-zxB" firstAttribute="baseline" secondItem="LOl-xB-sYj" secondAttribute="firstBaseline" symbolType="layoutAnchor" id="BkP-kA-Ymg"/>
+                            <constraint firstItem="LOl-xB-sYj" firstAttribute="leading" secondItem="ccc-Q0-WRk" secondAttribute="leading" id="Gtm-QE-kjK"/>
+                            <constraint firstAttribute="trailing" secondItem="LOl-xB-sYj" secondAttribute="trailing" id="WnO-Uf-NmJ"/>
+                            <constraint firstItem="LOl-xB-sYj" firstAttribute="bottom" secondItem="BGM-Kp-k0E" secondAttribute="bottom" id="dq9-5J-4Zy"/>
+                            <constraint firstItem="LOl-xB-sYj" firstAttribute="leading" secondItem="ryj-6a-zxB" secondAttribute="leading" id="vEP-73-Ij9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BGM-Kp-k0E"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Devices" image="devicesImage" id="tmy-QI-NHB"/>
+                    <navigationItem key="navigationItem" id="fhJ-Nm-ckB"/>
+                    <connections>
+                        <outlet property="regDevCollectionView" destination="LOl-xB-sYj" id="ljV-p7-1xJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MT7-tt-YPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500" y="-670"/>
+            <point key="canvasLocation" x="500.00000000000006" y="-670.3125"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="9dt-Hp-rG2">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="SqN-9n-dJK" customClass="LoginViewController" customModule="IOT_Controller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="afm-lH-wny">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpY-ot-O7s">
@@ -356,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grq-f0-EnV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-978.26086956521749" y="47.544642857142854"/>
+            <point key="canvasLocation" x="-1280" y="48"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wgd-YM-kAf">
@@ -368,16 +419,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8XQ-CG-mi2" kind="relationship" relationship="viewControllers" id="NwC-8x-DkO"/>
-                        <segue destination="rcP-sM-aan" kind="relationship" relationship="viewControllers" id="96K-bf-FIB"/>
-                        <segue destination="1gh-sY-QUj" kind="relationship" relationship="viewControllers" id="hxn-by-Ijn"/>
+                        <segue destination="8XQ-CG-mi2" kind="relationship" relationship="viewControllers" id="RlQ-IO-HzQ"/>
+                        <segue destination="rcP-sM-aan" kind="relationship" relationship="viewControllers" id="tGF-0g-8w0"/>
+                        <segue destination="1gh-sY-QUj" kind="relationship" relationship="viewControllers" id="a0n-Gf-cC0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71Q-UM-CC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-290" y="48"/>
+            <point key="canvasLocation" x="-403" y="48"/>
         </scene>
         <!--Add Devices-->
         <scene sceneID="dMe-Ka-f6h">
@@ -411,13 +463,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="8fs-Ap-ZS1">
                                     <size key="itemSize" width="147" height="141"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="64"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="deleteDevicesCollectionViewCell" id="Hd4-Lj-HpY">
-                                        <rect key="frame" x="8" y="8" width="147" height="141"/>
+                                        <rect key="frame" x="8" y="82" width="147" height="141"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="147" height="141"/>
@@ -426,17 +478,31 @@
                                         <size key="customSize" width="147" height="141"/>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="delDevicesCollectionSectionHdr" id="VFc-Dt-vVJ">
+                                    <rect key="frame" x="0.0" y="8" width="414" height="64"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registered Devices" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnm-A6-5XS">
+                                            <rect key="frame" x="8" y="9" width="377" height="46"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </collectionReusableView>
                             </collectionView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HR5-XB-KSV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mys-gg-b7R"/>
                                     <barButtonItem title="LogOut" image="signoffImage" id="BLo-y2-1Zg">
                                         <connections>
                                             <segue destination="SqN-9n-dJK" kind="show" identifier="signOffLinkToLoginPage" id="whN-EJ-u4g"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mys-gg-b7R"/>
                                 </items>
+                                <color key="barTintColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -462,7 +528,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Gso-Aq-7YG"/>
+        <segue reference="mx7-F8-dOB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addDevicesImage" width="25" height="25"/>

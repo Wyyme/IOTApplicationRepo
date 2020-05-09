@@ -1,30 +1,28 @@
 //
-//  DeleteDeviceViewController.swift
+//  RegDevViewController.swift
 //  IOTController
 //
-//  Created by Raja Mohamed on 5/8/20.
+//  Created by Raja Mohamed on 5/9/20.
 //  Copyright © 2020 Wyyme. All rights reserved.
 //
 
 import UIKit
 
-class DeleteDeviceViewController: UIViewController {
+class RegDevViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     
     let regDevicesList = [UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue, UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue,UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue,UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue]
-
-    @IBOutlet weak var deleteDevicesCollectionView: UICollectionView!
     
+    @IBOutlet weak var regDevCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        deleteDevicesCollectionView.dataSource = self
-        deleteDevicesCollectionView.delegate = self
+        regDevCollectionView.dataSource = self
+        regDevCollectionView.delegate = self
     }
-}
-
-extension DeleteDeviceViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return regDevicesList.count
@@ -36,7 +34,7 @@ extension DeleteDeviceViewController: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deleteDevicesCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "registeredDevicesCollectionViewCell", for: indexPath)
         
         cell.backgroundColor = regDevicesList[indexPath.item]
         return cell
@@ -60,11 +58,10 @@ extension DeleteDeviceViewController: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "delDevicesCollectionSectionHdr", for: indexPath)
+        let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "registeredDevicesCollectionSectionHdr", for: indexPath)
         
         return view
     }
     
-    
-    
+
 }

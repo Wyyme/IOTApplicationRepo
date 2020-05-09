@@ -29,7 +29,7 @@
 		FCA5436524627D0D00D533CE /* imgIOTApp_Backup.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5436424627D0D00D533CE /* imgIOTApp_Backup.png */; };
 		FCAD4AFC2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD4AFB2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift */; };
 		FCAD4AFE2453878100AF6B8A /* ListWirelessConnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD4AFD2453878100AF6B8A /* ListWirelessConnViewController.swift */; };
-		FCCAD1F024565BA800C03DB4 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCAD1EF24565BA800C03DB4 /* DevicesViewController.swift */; };
+		FCEC65E3246764BB00D85F6F /* RegDevViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC65E2246764BB00D85F6F /* RegDevViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +57,7 @@
 		FCA5436424627D0D00D533CE /* imgIOTApp_Backup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgIOTApp_Backup.png; sourceTree = "<group>"; };
 		FCAD4AFB2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WirelessConnectionTypeViewController.swift; sourceTree = "<group>"; };
 		FCAD4AFD2453878100AF6B8A /* ListWirelessConnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWirelessConnViewController.swift; sourceTree = "<group>"; };
-		FCCAD1EF24565BA800C03DB4 /* DevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
+		FCEC65E2246764BB00D85F6F /* RegDevViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegDevViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,8 @@
 				FC74CA852453474F00CC1799 /* SceneDelegate.swift */,
 				FC74CA872453474F00CC1799 /* ViewController.swift */,
 				FC74CA892453474F00CC1799 /* Main.storyboard */,
+				FCEC65E2246764BB00D85F6F /* RegDevViewController.swift */,
 				FC3D180C245DCB0A00FADB30 /* LoginViewController.swift */,
-				FCCAD1EF24565BA800C03DB4 /* DevicesViewController.swift */,
 				FCAD4AFD2453878100AF6B8A /* ListWirelessConnViewController.swift */,
 				FCAD4AFB2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift */,
 				FC74CA8C2453475000CC1799 /* Assets.xcassets */,
@@ -224,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3D180D245DCB0A00FADB30 /* LoginViewController.swift in Sources */,
+				FCEC65E3246764BB00D85F6F /* RegDevViewController.swift in Sources */,
 				FCAD4AFC2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift in Sources */,
 				FC74CA882453474F00CC1799 /* ViewController.swift in Sources */,
 				FCA5434E246270EC00D533CE /* Devices.swift in Sources */,
@@ -231,7 +232,6 @@
 				FCA543502462747200D533CE /* UserDefaultsManager.swift in Sources */,
 				FC055D46246651130082E6BB /* DeleteDeviceViewController.swift in Sources */,
 				FC74CA842453474F00CC1799 /* AppDelegate.swift in Sources */,
-				FCCAD1F024565BA800C03DB4 /* DevicesViewController.swift in Sources */,
 				FC74CA862453474F00CC1799 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
