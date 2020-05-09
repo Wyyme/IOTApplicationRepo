@@ -34,6 +34,8 @@ class LoginViewController: UIViewController {
         let defaults = UserDefaults()
         loginUserName?.text = defaults.object(forKey: "Uname") as? String
         loginUserPassword?.text = defaults.object(forKey: "Password") as? String
+        
+        handleSignInAndClearButtonChange()
     }
     
     @objc func loginUserNameChange(){

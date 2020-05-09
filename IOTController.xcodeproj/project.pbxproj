@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC055D46246651130082E6BB /* DeleteDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC055D45246651130082E6BB /* DeleteDeviceViewController.swift */; };
 		FC3D180D245DCB0A00FADB30 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D180C245DCB0A00FADB30 /* LoginViewController.swift */; };
 		FC74CA842453474F00CC1799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74CA832453474F00CC1799 /* AppDelegate.swift */; };
 		FC74CA862453474F00CC1799 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74CA852453474F00CC1799 /* SceneDelegate.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC055D45246651130082E6BB /* DeleteDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDeviceViewController.swift; sourceTree = "<group>"; };
 		FC3D180C245DCB0A00FADB30 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FC74CA802453474F00CC1799 /* IOT Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOT Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC74CA832453474F00CC1799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				FC74CA8C2453475000CC1799 /* Assets.xcassets */,
 				FC74CA8E2453475000CC1799 /* LaunchScreen.storyboard */,
 				FC82320D245E5B7B00D29B7A /* Info.plist */,
+				FC055D45246651130082E6BB /* DeleteDeviceViewController.swift */,
 			);
 			path = IOTControllerScene;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				FCA5434E246270EC00D533CE /* Devices.swift in Sources */,
 				FCAD4AFE2453878100AF6B8A /* ListWirelessConnViewController.swift in Sources */,
 				FCA543502462747200D533CE /* UserDefaultsManager.swift in Sources */,
+				FC055D46246651130082E6BB /* DeleteDeviceViewController.swift in Sources */,
 				FC74CA842453474F00CC1799 /* AppDelegate.swift in Sources */,
 				FCCAD1F024565BA800C03DB4 /* DevicesViewController.swift in Sources */,
 				FC74CA862453474F00CC1799 /* SceneDelegate.swift in Sources */,
