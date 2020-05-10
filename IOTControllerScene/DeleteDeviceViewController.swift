@@ -36,9 +36,10 @@ extension DeleteDeviceViewController: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deleteDevicesCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deleteDevicesCollectionViewCell", for: indexPath) as! DelDevCollectionViewCell
         
-        cell.backgroundColor = regDevicesList[indexPath.item]
+        let backgroundColor = regDevicesList[indexPath.item]
+        cell.setup(bgColor: backgroundColor, cellNumber: indexPath.item)
         return cell
         
     }
@@ -63,8 +64,8 @@ extension DeleteDeviceViewController: UICollectionViewDataSource, UICollectionVi
         if kind == UICollectionView.elementKindSectionHeader{
            
            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "delDevicesCollectionSectionHdr", for: indexPath)
+            //as! DelDevCollectionViewCell
            
-            //as! RegDevHdrCollectionReusableView
            //view.setup(count: regDevicesList.count)
            
            return view

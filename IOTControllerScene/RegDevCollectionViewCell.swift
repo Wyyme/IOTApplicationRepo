@@ -22,6 +22,7 @@ class RegDevCollectionViewCell: UICollectionViewCell {
     func setup(bgColor: UIColor, cellNumber: Int){
         
         self.backgroundColor = bgColor
+        numberLabel.textColor = UIColor.black
         numberLabel.text = "\(cellNumber)"
     }
     

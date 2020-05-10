@@ -10,6 +10,8 @@ import UIKit
 
 class DelDevCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var numberLabel: UILabel!
+    
     override func awakeFromNib() {
            super.awakeFromNib()
            
@@ -21,7 +23,8 @@ class DelDevCollectionViewCell: UICollectionViewCell {
        func setup(bgColor: UIColor, cellNumber: Int){
            
            self.backgroundColor = bgColor
-           //numberLabel.text = "\(cellNumber)"
+           numberLabel.textColor = UIColor.black
+           numberLabel.text = "\(cellNumber)"
        }
     
 }
