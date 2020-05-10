@@ -15,6 +15,8 @@
 		FC74CA8B2453474F00CC1799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74CA892453474F00CC1799 /* Main.storyboard */; };
 		FC74CA8D2453475000CC1799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC74CA8C2453475000CC1799 /* Assets.xcassets */; };
 		FC74CA902453475000CC1799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74CA8E2453475000CC1799 /* LaunchScreen.storyboard */; };
+		FC8067FD246859A400C48530 /* RegDevCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8067FC246859A400C48530 /* RegDevCollectionViewCell.swift */; };
+		FC8067FF246864DC00C48530 /* DelDevCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8067FE246864DC00C48530 /* DelDevCollectionViewCell.swift */; };
 		FCA5434E246270EC00D533CE /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA5434D246270EC00D533CE /* Devices.swift */; };
 		FCA543502462747200D533CE /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA5434F2462747200D533CE /* UserDefaultsManager.swift */; };
 		FCA5435324627C8100D533CE /* imgAddDevices.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA5435224627C8100D533CE /* imgAddDevices.png */; };
@@ -42,6 +44,8 @@
 		FC74CA8A2453474F00CC1799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC74CA8C2453475000CC1799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC74CA8F2453475000CC1799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC8067FC246859A400C48530 /* RegDevCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegDevCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC8067FE246864DC00C48530 /* DelDevCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelDevCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC82320D245E5B7B00D29B7A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCA5434D246270EC00D533CE /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
 		FCA5434F2462747200D533CE /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				FC74CA8E2453475000CC1799 /* LaunchScreen.storyboard */,
 				FC82320D245E5B7B00D29B7A /* Info.plist */,
 				FC055D45246651130082E6BB /* DeleteDeviceViewController.swift */,
+				FC8067FC246859A400C48530 /* RegDevCollectionViewCell.swift */,
+				FC8067FE246864DC00C48530 /* DelDevCollectionViewCell.swift */,
 			);
 			path = IOTControllerScene;
 			sourceTree = "<group>";
@@ -226,6 +232,8 @@
 				FC3D180D245DCB0A00FADB30 /* LoginViewController.swift in Sources */,
 				FCEC65E3246764BB00D85F6F /* RegDevViewController.swift in Sources */,
 				FCAD4AFC2453806A00AF6B8A /* WirelessConnectionTypeViewController.swift in Sources */,
+				FC8067FD246859A400C48530 /* RegDevCollectionViewCell.swift in Sources */,
+				FC8067FF246864DC00C48530 /* DelDevCollectionViewCell.swift in Sources */,
 				FC74CA882453474F00CC1799 /* ViewController.swift in Sources */,
 				FCA5434E246270EC00D533CE /* Devices.swift in Sources */,
 				FCAD4AFE2453878100AF6B8A /* ListWirelessConnViewController.swift in Sources */,

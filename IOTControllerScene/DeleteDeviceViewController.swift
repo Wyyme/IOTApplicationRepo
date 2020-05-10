@@ -8,13 +8,13 @@
 
 import UIKit
 
-class DeleteDeviceViewController: UIViewController {
+class DeleteDeviceViewController: UIViewController, UICollectionViewDelegate {
     
     let regDevicesList = [UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue, UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue,UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue,UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue]
 
+    //@IBOutlet weak var deleteDevicesCollectionView: UICollectionView!
     @IBOutlet weak var deleteDevicesCollectionView: UICollectionView!
-    
-    
+       
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,11 +60,28 @@ extension DeleteDeviceViewController: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "delDevicesCollectionSectionHdr", for: indexPath)
-        
-        return view
+        if kind == UICollectionView.elementKindSectionHeader{
+           
+           let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "delDevicesCollectionSectionHdr", for: indexPath)
+           
+            //as! RegDevHdrCollectionReusableView
+           //view.setup(count: regDevicesList.count)
+           
+           return view
+       }
+       else {
+           
+           let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "delDevicesCollectionSectionFtr", for: indexPath)
+           
+           //view.setup(count: regDevicesList.count)
+           view.backgroundColor = UIColor.systemGray6
+           
+           return view
+           
+       }
+       
     }
     
-    
-    
 }
+
+

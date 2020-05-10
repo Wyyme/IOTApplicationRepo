@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegDevViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class RegDevViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     
     let regDevicesList = [UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue, UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue,UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue,UIColor.red, UIColor.green, UIColor.yellow, UIColor.blue]
@@ -34,34 +34,63 @@ class RegDevViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "registeredDevicesCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "registeredDevicesCollectionViewCell", for: indexPath) as! RegDevCollectionViewCell
         
-        cell.backgroundColor = regDevicesList[indexPath.item]
+        let backgroundColor = regDevicesList[indexPath.item]
+        cell.setup(bgColor: backgroundColor, cellNumber: indexPath.item)
         return cell
         
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+
         let columnNum: CGFloat = 2
         let collectionViewWidth = collectionView.bounds.width - 25
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         let spaceBetweenCells = flowLayout.minimumInteritemSpacing * (columnNum - 1)
         let adjustedWidth = collectionViewWidth - spaceBetweenCells
-        
+
         let width: CGFloat = floor(adjustedWidth / columnNum)
         let height: CGFloat = 100
         return CGSize(width: width, height: height)
-        
+
     }
     
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "registeredDevicesCollectionSectionHdr", for: indexPath)
+        if kind == UICollectionView.elementKindSectionHeader{
+            
+            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "registeredDevicesCollectionSectionHdr", for: indexPath) as! RegDevHdrCollectionReusableView
+            
+            view.setup(count: regDevicesList.count)
+            
+            return view
+        }
+        else {
+            
+            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "registeredDevicesCollectionSectionFtr", for: indexPath)
+            
+            //view.setup(count: regDevicesList.count)
+            view.backgroundColor = UIColor.systemGray6
+            
+            return view
+            
+        }
         
-        return view
     }
     
 
+}
+
+
+class RegDevHdrCollectionReusableView: UICollectionReusableView{
+    
+    @IBOutlet weak var headerLabelOfCollectionView: UILabel!
+
+    func setup(count: Int){
+        headerLabelOfCollectionView.text = "Registered Devices: \(count)"
+    }
+    
 }
